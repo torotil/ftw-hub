@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = 'Convert folk dance event data for different platforms'
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
+license = "gpl-3.0-or-later"
 keywords = []
 authors = [
   { name = "Roman Zimmermann", email = "roman@more-onion.com" },
@@ -26,6 +26,16 @@ classifiers = [
 ]
 dependencies = [
   "click>=8.1,<9",
+  "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "ipython",
+  "pre-commit",
+  "pytest",
+  "pytest-cov",
 ]
 
 [project.urls]
@@ -33,10 +43,14 @@ Documentation = "https://github.com/torotil/ftw-hub#readme"
 Issues = "https://github.com/torotil/ftw-hub/issues"
 Source = "https://github.com/torotil/ftw-hub"
 
+[project.scripts]
+ftw-hub = "ftw_hub:cli"
+
 [tool.hatch.version]
 source = "vcs"
 
 [tool.hatch.envs.default]
+path = ".hatch"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
@@ -62,6 +76,18 @@ dependencies = [
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/ftw_hub tests}"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+ignore = [
+  "RUF002", # Allow typographic right-ticks.
+]
+
+[tool.ruff.lint]
+select = ["I"]
 
 [tool.coverage.run]
 source_pkgs = ["ftw_hub", "tests"]

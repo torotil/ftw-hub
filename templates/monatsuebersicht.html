@@ -1,0 +1,72 @@
+<h3>Tanzabende</h3>
+
+<ul>
+	{% for event in events %}
+	<li>
+		<p><strong>
+            {{ event.start.strftime("%d.%m.") }},
+            {% if event.end %}
+                {{ event.start.strftime("%H:%M") }} bis
+                {{ event.end.strftime("%H:%M") }}
+            {% else %}
+                ab {{ event.start.strftime("%H:%M") }}
+            {% endif %}
+            , {{ event.title }}
+        </strong>
+            {% for link in event.links %}
+                <a href= "{{ link.href }}" target="_blank" title= "{{ link.title }}"><img alt="{{ link.alt }}" src="{{ link.src }}" style="width: 24px;margin-bottom: -4px;margin-top: -4px;" width="24" /></a>
+            {% endfor %}
+            <br>
+            {{ event.location}}
+        </p>
+        <p>
+            {{ event.description|replace('\n', '<br>') }}
+        </p>
+	</li>
+	{% endfor %}
+</ul>
+
+<h3>Workshops</h3>
+<ul>
+	{% for event in workshops %}
+	<li>
+		<p><strong>
+            {{ event.start.strftime("%d.%m.") }},
+            {% if event.end %}
+                {{ event.start.strftime("%H:%M") }} bis
+                {{ event.end.strftime("%H:%M") }}
+            {% else %}
+                ab {{ event.start.strftime("%H:%M") }}
+            {% endif %}
+            , {{ event.title }}
+        </strong>
+            {% for link in event.links %}
+                <a href= "{{ link.href }}" target="_blank" title= "{{ link.title }}"><img alt="{{ link.alt }}" src="{{ link.src }}" style="width: 24px;margin-bottom: -4px;margin-top: -4px;" width="24" /></a>
+            {% endfor %}
+            <br>
+            {{ event.location}}
+        </p>
+        <p>
+            {{ event.description }}
+        </p>
+	</li>
+	{% endfor %}
+</ul>
+
+<h3>Vorschau</h3>
+<ul>
+    {% for event in preview %}
+    <li>
+		<p><strong>
+            {{ event.start.strftime("%d.%m.") }},
+            {% if event.end %}
+                {{ event.start.strftime("%H:%M") }} bis
+                {{ event.end.strftime("%H:%M") }}
+            {% else %}
+                ab {{ event.start.strftime("%H:%M") }}
+            {% endif %}
+            , {{ event.title }}
+        </strong></p>
+    </li>
+    {% endfor %}
+</ul>
