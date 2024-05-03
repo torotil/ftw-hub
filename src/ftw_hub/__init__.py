@@ -28,5 +28,10 @@ def cli(ctx, events_yaml):
 @click.pass_context
 def monatsuebersicht_html(ctx):
     """Generate a HTML email with a month’s events."""
+    data = ctx.obj["events"]
+    events = []
+    for event in data["events"]:
+        if (series_key := event.get("series")) and (series := data["series"].get(series_key)):
+            events.append({**series.get("defaults", {}), **event})
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
-    click.echo(template.render(ctx.obj["events"]), nl=False)
+    click.echo(template.render({"events": events}), nl=False)
