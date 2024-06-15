@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import collections
 import pathlib
 import sys
 
@@ -24,6 +25,24 @@ def cli(ctx, events_yaml):
     }
 
 
+link_data = collections.defaultdict(lambda: {"symbol": "link", "alt": "Link-Symbol"})
+link_data["fb.event"] = {
+    "title": "diese Veranstaltung auf Facebook",
+    "symbol": "facebook",
+    "alt": "Facebook-Logo",
+}
+link_data["tradivarium"] = {
+    "title": "Veranstaltungsinfos auf tradivarium.at",
+}
+
+
+def format_event(event: dict):
+    """Extend the event data structure a bit."""
+    event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items()]
+    event["description"] = event["description"].strip()
+    return event
+
+
 @cli.command
 @click.pass_context
 def monatsuebersicht_html(ctx):
@@ -32,6 +51,6 @@ def monatsuebersicht_html(ctx):
     events = []
     for event in data["events"]:
         if (series_key := event.get("series")) and (series := data["series"].get(series_key)):
-            events.append({**series.get("defaults", {}), **event})
+            events.append(format_event({**series.get("defaults", {}), **event}))
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
     click.echo(template.render({"events": events}), nl=False)
