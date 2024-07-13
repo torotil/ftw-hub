@@ -38,8 +38,10 @@ link_data["tradivarium"] = {
 }
 
 
-def format_event(event: dict):
+def format_event(event: dict, series: dict):
     """Extend the event data structure a bit."""
+    if (series_key := event.get("series")) and (event_series := series.get(series_key)):
+        event = utils.merge_dicts(event_series.get("defaults", {}), event)
     event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items()]
     event["description"] = event["description"].strip()
     return event
@@ -61,14 +63,16 @@ def monatsuebersicht_html(ctx, month):
     tpl_data = {
         "events": [],
         "preview": [],
+        "workshops": [],
     }
-    events = []
-    preview_events = []
     for event in data["events"]:
         if event["start"] < date_from:
             continue
-        key = "preview" if event["end"] > date_to else "events"
-        if (series_key := event.get("series")) and (series := data["series"].get(series_key)):
-            tpl_data[key].append(format_event({**series.get("defaults", {}), **event}))
+        key = "preview" if event["start"] >= date_to else "events"
+        tpl_data[key].append(format_event(event, data["series"]))
+    for event in tpl_data["events"]:
+        if ws := event.get("workshop_event", None):
+            tpl_data["workshops"].append(ws)
+
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
     click.echo(template.render(tpl_data), nl=False)
