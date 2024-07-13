@@ -12,19 +12,28 @@ import dateutil
 import jinja2
 import yaml
 
+from ftw_hub import utils
+
 
 @click.group
-@click.option("--events-yaml", type=click.File(), default=sys.stdin)
+@click.option("--data-dir", type=click.Path(readable=True, file_okay=False, path_type=pathlib.Path))
 @click.pass_context
-def cli(ctx, events_yaml):
+def cli(ctx, data_dir: pathlib.Path):
     """Utility to transform event data into various formats."""
     templates_dir = str(pathlib.Path(__file__).resolve().parent.parent.parent / "templates")
+    data = {}
     ctx.obj = {
-        "events": yaml.safe_load(events_yaml),
         "jinja_env": jinja2.Environment(
             loader=jinja2.FileSystemLoader(templates_dir), autoescape=True
         ),
     }
+    if data_dir:
+        for path in data_dir.rglob("*.yaml"):
+            with path.open() as f:
+                new_data = yaml.safe_load(f)
+                yaml.dump(new_data, sys.stderr)
+                data = utils.merge_dicts(data, new_data)
+    ctx.obj["data"] = data
 
 
 link_data = collections.defaultdict(lambda: {"symbol": "link", "alt": "Link-Symbol"})
@@ -58,7 +67,7 @@ def monatsuebersicht_html(ctx, month):
     year, month = [int(x) for x in month.split("-")]
     date_from = datetime.datetime(year, month, 1)
     date_to = date_from + dateutil.relativedelta.relativedelta(months=1)
-    data = ctx.obj["events"]
+    data = ctx.obj["data"]
 
     tpl_data = {
         "events": [],
@@ -74,5 +83,6 @@ def monatsuebersicht_html(ctx, month):
         if ws := event.get("workshop_event", None):
             tpl_data["workshops"].append(ws)
 
+    tpl_data = {k: list(sorted(v, key=lambda e: e["start"])) for k, v in tpl_data.items()}
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
     click.echo(template.render(tpl_data), nl=False)
