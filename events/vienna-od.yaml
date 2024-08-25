@@ -1,0 +1,35 @@
+series:
+  vienna/organic-dancefloor:
+    title: organic dancefloor
+    description:
+    defaults:
+      title: organic dancefloor
+      description: ""
+      location: Frau Mayer, 01., Rudolfsplatz 12
+      country: Austria
+      city: Vienna
+      styles: [balfolk]
+      organisation:
+      bands:
+        - Duo Härtel Wascher & friends
+      workshop: false
+      social: true
+      price: freie Spende
+      links: {}
+
+
+events:
+  - series: vienna/organic-dancefloor
+    start: 2024-09-18T22:00:00
+  - series: vienna/organic-dancefloor
+    start: 2024-10-16T20:00:00
+  - series: vienna/organic-dancefloor
+    start: 2024-11-20T20:00:00
+  - series: vienna/organic-dancefloor
+    start: 2025-01-15T20:00:00
+  - series: vienna/organic-dancefloor
+    start: 2025-03-19T20:00:00
+  - series: vienna/organic-dancefloor
+    start: 2025-04-16T20:00:00
+  - series: vienna/organic-dancefloor
+    start: 2025-05-21T20:00:00

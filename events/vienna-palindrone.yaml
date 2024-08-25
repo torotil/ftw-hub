@@ -1,0 +1,19 @@
+events:
+  - title: Bal-Concert mit Hotel Palindrone
+    description: ""
+    links:
+      fb.event:
+      tradivarium: https://tradivarium.at/event/2024-10-11-183000-to-2024-10-11-223000/bal-concert-mit-hotel-palindrone
+      homepage: https://sargfabrik.at/veranstaltungen/bal-concert-hotel-palindrone
+    start: 2024-10-11T19:30:00
+    bands:
+      - Hotel Palindrone
+    country: Austria
+    city: Vienna
+    styles: [balfolk]
+    workshop: true
+    social: true
+    price: 25€ / 17,50€ (unter 27)
+    workshop_event:
+      title: Tanz-Crashkurs für Einsteiger*innen
+      start: 2024-10-11T18:30:00

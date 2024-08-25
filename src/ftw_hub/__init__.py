@@ -44,6 +44,13 @@ link_data["fb.event"] = {
 }
 link_data["tradivarium"] = {
     "title": "Veranstaltungsinfos auf tradivarium.at",
+    "symbol": "link",
+    "alt": "Link-Symbol",
+}
+link_data["homepage"] = {
+    "title": "Mehr Infos auf der Homepage",
+    "symbol": "link",
+    "alt": "Link-Symbol",
 }
 
 
@@ -51,7 +58,7 @@ def format_event(event: dict, series: dict):
     """Extend the event data structure a bit."""
     if (series_key := event.get("series")) and (event_series := series.get(series_key)):
         event = utils.merge_dicts(event_series.get("defaults", {}), event)
-    event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items()]
+    event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items() if l]
     event["description"] = event["description"].strip()
     return event
 
