@@ -33,6 +33,12 @@ def cli(ctx, data_dir: pathlib.Path):
                 new_data = yaml.safe_load(f)
                 data = utils.merge_dicts(data, new_data)
     ctx.obj["data"] = data
+    ctx.obj["events"] = list(
+        sorted(
+            (format_event(e, data.get("series", {})) for e in data.get("events", [])),
+            key=lambda e: e["sort_date"],
+        )
+    )
 
 
 link_data = collections.defaultdict(lambda: {"symbol": "link", "alt": "Link-Symbol"})
@@ -73,6 +79,7 @@ def format_event(event: dict, series: dict):
         event = utils.merge_dicts(event_series.get("defaults", {}), event)
     event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items() if l]
     event["description"] = event["description"].strip()
+    event["sort_date"] = sort_date(event["start"])
     return event
 
 
@@ -110,23 +117,21 @@ def monatsuebersicht_html(ctx, month):
     year, month = [int(x) for x in month.split("-")]
     date_from = datetime.datetime(year, month, 1)
     date_to = date_from + dateutil.relativedelta.relativedelta(months=1)
-    data = ctx.obj["data"]
 
     tpl_data = {
         "events": [],
         "preview": [],
         "workshops": [],
     }
-    for event in data["events"]:
-        if event["start"] < date_from:
+    for event in ctx.obj["events"]:
+        if event["sort_date"] < date_from:
             continue
-        key = "preview" if event["start"] >= date_to else "events"
-        tpl_data[key].append(format_event(event, data["series"]))
+        key = "preview" if event["sort_date"] >= date_to else "events"
+        tpl_data[key].append(event)
     for event in tpl_data["events"]:
         if ws := event.get("workshop_event", None):
-            tpl_data["workshops"].append(ws)
+            tpl_data["workshops"].append(utils.merge_dicts(event, ws))
 
-    tpl_data = {k: list(sorted(v, key=lambda e: e["start"])) for k, v in tpl_data.items()}
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
     click.echo(template.render(tpl_data), nl=False)
 
@@ -137,22 +142,21 @@ def folktanz_at(ctx):
     """Generate a list of events for the folktanz.at website."""
     now = datetime.datetime.now()
     date_from = datetime.datetime(now.year, now.month, 1)
-    data = ctx.obj["data"]
 
     tpl_data = {
         "events_per_month": collections.defaultdict(list),
         "month_names": {},
         "format_date_range": format_date_range,
     }
-    for event in sorted(data["events"], key=lambda e: sort_date(e["start"])):
-        if sort_date(event["start"]) < date_from:
+    for event in ctx.obj["events"]:
+        if sort_date(event["sort_date"]) < date_from:
             continue
         format_date_range(event["start"], event.get("end"))
         month = event["start"].strftime("%y-%m")
         tpl_data["month_names"][
             month
         ] = f"{MONTHS_DE[event['start'].month - 1]} {event['start'].year}"
-        tpl_data["events_per_month"][month].append(format_event(event, data["series"]))
+        tpl_data["events_per_month"][month].append(event)
 
     template = ctx.obj["jinja_env"].get_template("folktanz-at.html")
     click.echo(template.render(tpl_data), nl=False)
