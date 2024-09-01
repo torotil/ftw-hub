@@ -5,7 +5,7 @@
 import collections
 import datetime
 import pathlib
-import sys
+import typing as t
 
 import click
 import dateutil
@@ -31,7 +31,6 @@ def cli(ctx, data_dir: pathlib.Path):
         for path in data_dir.rglob("*.yaml"):
             with path.open() as f:
                 new_data = yaml.safe_load(f)
-                yaml.dump(new_data, sys.stderr)
                 data = utils.merge_dicts(data, new_data)
     ctx.obj["data"] = data
 
@@ -52,6 +51,20 @@ link_data["homepage"] = {
     "symbol": "link",
     "alt": "Link-Symbol",
 }
+MONTHS_DE = [
+    "Jänner",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember",
+]
 
 
 def format_event(event: dict, series: dict):
@@ -61,6 +74,29 @@ def format_event(event: dict, series: dict):
     event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items() if l]
     event["description"] = event["description"].strip()
     return event
+
+
+def format_date_range(
+    start: datetime.datetime | datetime.date,
+    end: t.Optional[datetime.datetime | datetime.date],
+    range_word="-",
+):
+    """Format an event’s start and end time."""
+    result = start.strftime("%d.%m.")
+    if isinstance(start, datetime.datetime):
+        result += " " + start.strftime("%H:%M")
+        if end:
+            result += f"{range_word}{end.strftime('%H:%M')},"
+    else:
+        if end and (end > start):
+            result += f"{range_word}{end.strftime('%d.%m')}"
+    return result
+
+
+def sort_date(d: datetime.date | datetime.datetime) -> datetime.datetime:
+    if isinstance(d, datetime.datetime):
+        return d
+    return datetime.datetime.combine(d, datetime.datetime.min.time())
 
 
 @cli.command
@@ -92,4 +128,31 @@ def monatsuebersicht_html(ctx, month):
 
     tpl_data = {k: list(sorted(v, key=lambda e: e["start"])) for k, v in tpl_data.items()}
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
+    click.echo(template.render(tpl_data), nl=False)
+
+
+@cli.command
+@click.pass_context
+def folktanz_at(ctx):
+    """Generate a list of events for the folktanz.at website."""
+    now = datetime.datetime.now()
+    date_from = datetime.datetime(now.year, now.month, 1)
+    data = ctx.obj["data"]
+
+    tpl_data = {
+        "events_per_month": collections.defaultdict(list),
+        "month_names": {},
+        "format_date_range": format_date_range,
+    }
+    for event in sorted(data["events"], key=lambda e: sort_date(e["start"])):
+        if sort_date(event["start"]) < date_from:
+            continue
+        format_date_range(event["start"], event.get("end"))
+        month = event["start"].strftime("%y-%m")
+        tpl_data["month_names"][
+            month
+        ] = f"{MONTHS_DE[event['start'].month - 1]} {event['start'].year}"
+        tpl_data["events_per_month"][month].append(format_event(event, data["series"]))
+
+    template = ctx.obj["jinja_env"].get_template("folktanz-at.html")
     click.echo(template.render(tpl_data), nl=False)
