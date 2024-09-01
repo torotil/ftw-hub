@@ -4,6 +4,7 @@
 
 import collections
 import datetime
+import functools
 import pathlib
 import typing as t
 
@@ -91,9 +92,11 @@ def format_date_range(
     """Format an event’s start and end time."""
     result = start.strftime("%d.%m.")
     if isinstance(start, datetime.datetime):
-        result += " " + start.strftime("%H:%M")
+        start_time = start.strftime("%H:%M")
         if end:
-            result += f"{range_word}{end.strftime('%H:%M')},"
+            result += f" {start_time}{range_word}{end.strftime('%H:%M')},"
+        else:
+            result += f" ab {start_time},"
     else:
         if end and (end > start):
             result += f"{range_word}{end.strftime('%d.%m')}"
@@ -122,6 +125,7 @@ def monatsuebersicht_html(ctx, month):
         "events": [],
         "preview": [],
         "workshops": [],
+        "format_date_range": functools.partial(format_date_range, range_word=" bis "),
     }
     for event in ctx.obj["events"]:
         if event["sort_date"] < date_from:
