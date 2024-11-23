@@ -1,4 +1,65 @@
 events:
+  - title: Workshop mit Maximilian Ohmacht
+    description: |
+      Workshop: Französischer Volkstanz
+
+      Kursbeitrag: 10€
+
+      Anmeldung per E-Mail an ohmi.deux@gmail.com
+    location: beat1060 Tanzstudio, 6., Millergasse 42-44
+    start: 2024-10-05T16:00:00
+    end: 2024-10-05T19:00:00
+    links: {}
+    bands: []
+    country: Austria
+    city: Vienna
+    styles: [balfolk]
+    workshop: true
+    social: false
+    price: 10€
+  - title: "Wochenend-Tanzworkshop mit Wanda Leben und Anton Hacker"
+    description: |
+      Schwerpunkte: Raumbewegung und Bewegungsraum
+      Bourrée à deux temps, Bourrée à trois temps
+
+      Musik: Lauge Dideriksen
+
+      Kursbeitrag nach Selbsteinschätzung: 120-200€
+
+      Anmeldung und nähere Infos per E-Mail an danskurs@gmx.at
+    location: Bockkeller, 16., Gallitzinstraße 1
+    start: 2024-11-16
+    end: 2025-11-17
+    links: {}
+    bands: []
+    country: Austria
+    city: Vienna
+    styles: [balfolk]
+    workshop: true
+    social: false
+    price: 120-200€
+  - title: "Wochenend-Tanzworkshop mit Wanda Leben und Anton Hacker"
+    description: |
+      Schwerpunkte: Timing und Drehbewegung
+      Polska, Slängpolska
+
+      Musik: Jamie
+
+      Kursbeitrag nach Selbsteinschätzung: 120-200€
+
+      Anmeldung und nähere Infos per E-Mail an danskurs@gmx.at
+    location: Bockkeller, 16., Gallitzinstraße 1
+    start: 2024-12-07
+    end: 2025-12-08
+    links:
+      tradivarium: https://tradivarium.at/event/2024-12-07-093000-to-2024-12-08-163000/schwedisch-tanzkurs-polska-und-sl-ngpolska-mit
+    bands: []
+    country: Austria
+    city: Vienna
+    styles: [scandi]
+    workshop: true
+    social: false
+    price: 120-200€
   - title: Folk-Marathon
     description: ""
     links:
@@ -12,4 +73,25 @@ events:
     styles: [balfolk, scandi]
     workshop: true
     social: true
-    price:
+    price: 25€ / 17,50€
+  - title: "Wochenend-Tanzworkshop mit Wanda Leben und Anton Hacker"
+    description: |
+      Schwerpunkte: Kontakt und Hörempfinden
+      Slängpolska på fläck
+
+      Musik: Lauge Dideriksen
+
+      Kursbeitrag nach Selbsteinschätzung: 120-200€
+
+      Anmeldung und nähere Infos per E-Mail an danskurs@gmx.at
+    location: Bockkeller, 16., Gallitzinstraße 1
+    start: 2025-01-18
+    end: 2025-01-19
+    links:
+      tradivarium: https://tradivarium.at/event/2025-01-18-093000-to-2025-01-19-163000/schwedisch-tanzkurs-polska-und-sl-ngpolska-mit
+    bands: []
+    country: Austria
+    city: Vienna
+    styles: [balfolk]
+    workshop: true
+    social: false

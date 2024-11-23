@@ -4,7 +4,11 @@ series:
     description: Ein Balfolk-Tanzabend mit Workshop davor. Findet ca. monatlich zwischen September und Juni an einem Sonntag statt.
     defaults:
       title: FolkTanz-Abend
-      description: ""
+      description: |
+        ‣ 16:00-18:00 Tanz-Workshop
+        ‣ ab 19:00 Tanzabend
+
+        Eintritt: 14€/10€
       location: Restaurant Achillion, 16., Ottakringer Str. 233
       country: Austria
       city: Vienna
@@ -39,6 +43,12 @@ events:
       title: Tanzworkshop vor dem FolkTanz-Abend
       end: 2024-09-08T18:00:00
   - series: vienna/folktanz-abend
+    title: FolkTanz-Abend mit DiaTon
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop mit Anton Hacker
+      ‣ ab 19:00 Tanzabend mit DiaTon
+
+      Eintritt: 14€/10€
     start: 2024-10-27T16:00:00
     end: 2024-10-27T22:30:00
     links:
@@ -47,6 +57,13 @@ events:
       title: Tanzworkshop vor dem FolkTanz-Abend
       end: 2024-10-27T18:00:00
   - series: vienna/folktanz-abend
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop mit Wanda Leben
+      ‣ ab 19:00 Tanzabend mit …
+      ‣‣ Johannes und Wanda
+      ‣‣ Johannes und Angelika
+
+      Eintritt: 14€/10€
     start: 2024-11-03T16:00:00
     end: 2024-11-03T22:30:00
     links:
@@ -54,3 +71,58 @@ events:
     workshop_event:
       title: Tanzworkshop vor dem FolkTanz-Abend
       end: 2024-11-03T18:00:00
+  - series: vienna/folktanz-abend
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop
+      ‣ ab 19:00 Tanzabend mit Trio Toxico
+
+      Eintritt: 14€/10€
+    start: 2024-12-08T16:00:00
+    end: 2024-12-08T22:30:00
+    links:
+      fb.event: https://www.facebook.com/events/888997443362823/
+    workshop_event:
+      title: Tanzworkshop vor dem FolkTanz-Abend
+      end: 2024-12-08T18:00:00
+  - series: vienna/folktanz-abend
+    start: 2025-02-02T16:00:00
+    end: 2025-02-02T22:30:00
+    title: FolkTanz-Abend mit Solid Ghost
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop mit Simon Wascher
+      ‣ ab 19:00 Tanzabend mit Solid Ghost
+
+      Eintritt: 14€/10€
+    links:
+      fb.event:
+    workshop_event:
+      title: Tanzworkshop vor dem FolkTanz-Abend
+      end: 2025-02-02T18:00:00
+  - series: vienna/folktanz-abend
+    title: FolkTanz-Abend mit den Lyranten
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop mit Simon Wascher
+      ‣ ab 19:00 Tanzabend mit den Lyranten
+
+      Eintritt: 14€/10€
+    start: 2025-03-30T16:00:00
+    end: 2025-03-30T22:30:00
+    links:
+      fb.event:
+    workshop_event:
+      title: Tanzworkshop vor dem FolkTanz-Abend
+      end: 2025-05-04T18:00:00
+  - series: vienna/folktanz-abend
+    title: FolkTanz-Abend mit den TradTöchtern
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop
+      ‣ ab 19:00 Tanzabend mit TradTöchter „Neue Geigenmusik“ (Vivien Zeller und Ursula Suchanek)
+
+      Eintritt: 14€/10€
+    start: 2025-05-04T16:00:00
+    end: 2025-05-04T22:30:00
+    links:
+      fb.event:
+    workshop_event:
+      title: Tanzworkshop vor dem FolkTanz-Abend
+      end: 2025-05-04T18:00:00
