@@ -1,3 +1,1 @@
-# SPDX-FileCopyrightText: 2024-present Roman Zimmermann <roman@more-onion.com>
-#
-# SPDX-License-Identifier: MIT
+"""Test module for the ftw_hub project."""

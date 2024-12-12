@@ -1,0 +1,61 @@
+Workshops und Tanzabende im Überblick
+
+** Tanzabende
+------------------------------------------------------------
+
+{% for event in events -%}
+{{ format_date_range(event.start, event.end) }} {{ event.title }}
+{{ event.location}}
+{%- if event.description %}
+
+{{ event.description }}
+{%- endif -%}
+
+{%- for link in event.links %}
+{{ link.href }}
+{%- endfor %}
+
+
+
+{% endfor -%}
+** Workshops
+------------------------------------------------------------
+
+{% for event in workshops -%}
+{{ format_date_range(event.start, event.end) }} {{ event.title }}
+{{ event.location}}
+{%- if event.description %}
+
+{{ event.description }}
+{%- endif -%}
+
+{%- for link in event.links %}
+{{ link.href }}
+{%- endfor %}
+
+
+
+{% endfor -%}
+** Vorschau
+------------------------------------------------------------
+{% for event in preview %}
+{{ format_date_range(event.start, event.end) }} {{ event.title }}{% if event.links %} — {% for link in event.links %} {{ link.href }}{% endfor -%}{% endif -%}
+{% endfor %}
+
+
+
+Diese E-Mail weiterleiten: *|FORWARD|*
+
+============================================================
+Anmeldung Newsletter auf http://www.folktanz.at
+
+
+
+*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
+
+*|LIST_ADDRESS|* *|END:IF|*
+
+Deine Newsletter-Einstellungen: *|UPDATE_PROFILE|*
+Abmelden: *|UNSUB|*
+
+*|IF:REWARDS|**|REWARDS_TEXT|* *|END:IF|*
