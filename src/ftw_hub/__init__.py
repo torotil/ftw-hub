@@ -156,6 +156,41 @@ def monatsuebersicht_html(ctx, month):
 
 
 @cli.command
+@click.argument("month")
+@click.pass_context
+def monatsuebersicht_txt(ctx, month):
+    """Generate a HTML email with a month’s events.
+
+    The MONTH must be passed in yyyy-mmm format
+    """
+    year, month = [int(x) for x in month.split("-")]
+    date_from = datetime.datetime(year, month, 1)
+    date_to = date_from + dateutil.relativedelta.relativedelta(months=1)
+
+    tpl_data = {
+        "events": [],
+        "preview": [],
+        "workshops": [],
+        "format_date_range": functools.partial(format_date_range, range_word=" bis "),
+    }
+    for event in ctx.obj["events"]:
+        if event["sort_date"] < date_from:
+            continue
+        if event["sort_date"] >= date_to:
+            if not event.get("sub_event", False):
+                key = "preview"
+            else:
+                continue
+        else:
+            is_workshop = event.get("workshop", False) and not event.get("social", True)
+            key = "workshops" if is_workshop else "events"
+        tpl_data[key].append(event)
+
+    template = ctx.obj["jinja_env"].get_template("monatsuebersicht.txt")
+    click.echo(template.render(tpl_data), nl=False)
+
+
+@cli.command
 @click.pass_context
 def folktanz_at(ctx):
     """Generate a list of events for the folktanz.at website."""
