@@ -41,6 +41,12 @@ events:
       fb.event: https://www.facebook.com/events/7991981204219932/
       tradivarium: https://tradivarium.at/event/2024-11-29-190000-to-2024-11-29-230000/muwifolxtanz-vol-26
   - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Marathon Edition
+    start: 2025-01-03T19:00:00
+    end: 2025-01-03T23:00:00
+    links:
+      fb.event: https://www.facebook.com/events/1240861490576498/
+  - series: vienna/muwifolxtanz
     title: MuwiFolxTanz Vol.27
     start: 2025-01-24T19:00:00
     end: 2025-01-24T23:00:00

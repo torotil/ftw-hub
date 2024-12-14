@@ -95,3 +95,23 @@ events:
     styles: [balfolk]
     workshop: true
     social: false
+  - title: "Tanzkurs mit Anna Björk & Karin Wallin (Geige) aus Schweden"
+    description: |
+      Ein fünftagiger Tanzkurs zu Bakmes och Polska hier in Wien geben. Karin Wallin wir dazu live spielen. "Bakmes och Polska" ist eine Bezeichnung für die westschwedischen Polskaformen auf der Tanzbahn, mit diese beiden Paardrehungen und Wicklerfiguren. Die fünf Tage geben Zeit sich mit Bakmes och Polska gründlich zu befassen. Damit umfasst der Kurs sowohl die Rundtanzformen Polska wie auch Bakmes sowie auf der Tanzbahn getanzte Wicklerfiguren. Dieser einwöchige Tanzkurs zum Paartanzen bietet eine aussergewöhnliche Gelegenheit zur tänzerischen Vertiefung.
+
+      Teilnahmebeitrag: 320€
+    location: Bockkeller, 16., Gallitzinstraße 1
+    start: 2025-02-03
+    end: 2025-02-07
+    links:
+      homepage: http://winterkurs.tradmus.org/
+    workshop: true
+  - title: "Tanz & Konzert — Karin Wallin & Anders Norudde"
+    description: ""
+    location: Bockkeller, 16., Gallitzinstraße 1
+    start: 2025-02-07
+    end: 2025-02-07
+    social: true
+    styles: [scandi]
+    links:
+      homepage: http://winterkurs.tradmus.org/
