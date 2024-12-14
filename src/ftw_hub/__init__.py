@@ -25,7 +25,8 @@ def cli(ctx, data_dir: pathlib.Path):
     data = {}
     ctx.obj = {
         "jinja_env": jinja2.Environment(
-            loader=jinja2.FileSystemLoader(templates_dir), autoescape=True
+            loader=jinja2.FileSystemLoader(templates_dir),
+            autoescape=jinja2.select_autoescape(["html"], ["txt"]),
         ),
     }
     if data_dir:
