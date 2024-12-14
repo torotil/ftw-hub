@@ -10,6 +10,7 @@ import typing as t
 
 import click
 import dateutil
+import ics
 import jinja2
 import yaml
 
@@ -126,6 +127,19 @@ def sort_date(d: datetime.date | datetime.datetime) -> datetime.datetime:
     return datetime.datetime.combine(d, datetime.datetime.min.time())
 
 
+def generate_ical_url(event: dict):
+    """Generate an iCalendar data URL for an event."""
+    calender = ics.Calendar()
+    ical_event = ics.Event(
+        name=event["title"],
+        begin=event["start"],
+        end=event.get("end"),
+        description=event["description"],
+    )
+    calender.events.add(ical_event)
+    return "data:text/calendar;charset=utf-8," + calender.serialize()
+
+
 @cli.command
 @click.argument("month")
 @click.pass_context
@@ -155,6 +169,7 @@ def monatsuebersicht_html(ctx, month):
         else:
             is_workshop = event.get("workshop", False) and not event.get("social", True)
             key = "workshops" if is_workshop else "events"
+        event["ical_url"] = generate_ical_url(event)
         tpl_data[key].append(event)
 
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
