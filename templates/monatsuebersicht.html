@@ -44,7 +44,7 @@
 <h3>Vorschau</h3>
 <ul>
     {% for event in preview %}
-    <li>{{ format_date_range(event.start, event.end) }} {{ event.title }}
+    <li>{{ format_date_range(event.start, event.end, short=True) }} {{ event.title }}
         {% for link in event.links -%}
             <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://eep.io/mc-cdn-images/icons/social-block-v2/gray-{{ link.symbol }}-96.png" style="width: 24px;margin-bottom: -4px;margin-top: -4px;" width="24" /></a>
         {% endfor -%}

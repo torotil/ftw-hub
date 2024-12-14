@@ -96,8 +96,13 @@ def format_date_range(
     start: datetime.datetime | datetime.date,
     end: t.Optional[datetime.datetime | datetime.date],
     range_word="-",
+    short=False,
 ):
     """Format an event’s start and end time."""
+    if short and isinstance(start, datetime.datetime):
+        start = start.date()
+        if end:
+            end = end.date()
     result = start.strftime("%d.%m.")
     if isinstance(start, datetime.datetime):
         start_time = start.strftime("%H:%M")
