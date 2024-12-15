@@ -17,3 +17,27 @@ events:
     workshop: true
     social: false
     price: 60€ / 40€
+  - &ws202502
+    title: Polska-Abendkurs (1/4)
+    description: |
+      Ein Workshop an 4 Montagen.
+
+      Anmeldung bis xx.xx. per E-Mail an jaichwilltanzen@gmail.com
+    location: 8., Lange Gasse 8
+    start: 2025-02-17T19:00:00
+    end: 2025-02-17T22:00:00
+    links: {}
+    styles: [scandi]
+    workshop: true
+  - <<: *ws202502
+    title: Polska-Abendkurs (2/4)
+    start: 2025-02-24T19:00:00
+    end: 2025-02-24T22:00:00
+  - <<: *ws202502
+    title: Polska-Abendkurs (3/4)
+    start: 2025-03-03T19:00:00
+    end: 2025-03-03T22:00:00
+  - <<: *ws202502
+    title: Polska-Abendkurs (4/4)
+    start: 2025-03-10T19:00:00
+    end: 2025-03-10T22:00:00

@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import base64
 import collections
 import datetime
 import functools
@@ -58,7 +59,12 @@ link_data["tradivarium"] = {
 link_data["homepage"] = {
     "title": "Mehr Infos auf der Homepage",
     "symbol": "link",
-    "alt": "Link-Symbol",
+    "alt": "Homepage-Symbol",
+}
+link_data["ical"] = {
+    "title": "in den Kalender eintragen (ical)",
+    "symbol": "calendar",
+    "alt": "Kalender-Symbol",
 }
 MONTHS_DE = [
     "Jänner",
@@ -137,7 +143,7 @@ def generate_ical_url(event: dict):
         description=event["description"],
     )
     calender.events.add(ical_event)
-    return "data:text/calendar;charset=utf-8," + calender.serialize()
+    return "data:text/calendar;base64," + base64.b64encode(calender.serialize().encode()).decode()
 
 
 @cli.command
@@ -169,7 +175,6 @@ def monatsuebersicht_html(ctx, month):
         else:
             is_workshop = event.get("workshop", False) and not event.get("social", True)
             key = "workshops" if is_workshop else "events"
-        event["ical_url"] = generate_ical_url(event)
         tpl_data[key].append(event)
 
     template = ctx.obj["jinja_env"].get_template("monatsuebersicht.html")
@@ -228,7 +233,7 @@ def folktanz_at(ctx):
             continue
         if event.get("sub_event", False):
             continue
-        format_date_range(event["start"], event.get("end"))
+        event["links"] = [{"href": generate_ical_url(event), **link_data["ical"]}] + event["links"]
         month = event["start"].strftime("%y-%m")
         tpl_data["month_names"][
             month

@@ -7,15 +7,17 @@
             {{ format_date_range(event.start, event.end) }}
             {{ event.title }}
         </strong>
-            {%- for link in event.links -%}
-                <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://eep.io/mc-cdn-images/icons/social-block-v2/gray-{{ link.symbol }}-96.png" style="width: 24px;margin-bottom: -4px;margin-top: -4px;" width="24" /></a>
-            {%- endfor -%}
             <br>
             {{ event.location}}
         </p>
-        <p>
+        {% if event.description %}<p>
             {{ event.description|replace('\n\n', '</p><p>')|replace('\n', '<br />')|safe }}
-        </p>
+        </p>{% endif %}
+        {% if event.links %}<p style="text-align:center;padding-right:20%">
+            {%- for link in event.links -%}
+                <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
+            {% endfor -%}
+        </p>{% endif %}
 	</li>
 	{% endfor %}
 </ul>
@@ -28,15 +30,17 @@
             {{ format_date_range(event.start, event.end) }}
             {{ event.title }}
         </strong>
-            {%- for link in event.links -%}
-                <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://eep.io/mc-cdn-images/icons/social-block-v2/gray-{{ link.symbol }}-96.png" style="width: 24px;margin-bottom: -4px;margin-top: -4px;" width="24" /></a>
-            {%- endfor -%}
             <br>
             {{ event.location}}
         </p>
-        <p>
+        {% if event.description %}<p>
             {{ event.description|replace('\n\n', '</p><p>')|replace('\n', '<br />')|safe }}
-        </p>
+        </p>{% endif %}
+        {% if event.links %}<p style="text-align:center;padding-right:20%">
+            {%- for link in event.links -%}
+                <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
+            {% endfor -%}
+        </p>{% endif %}
 	</li>
 	{% endfor %}
 </ul>
@@ -44,10 +48,12 @@
 <h3>Vorschau</h3>
 <ul>
     {% for event in preview %}
-    <li>{{ format_date_range(event.start, event.end, short=True) }} {{ event.title }}
-        {% for link in event.links -%}
-            <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://eep.io/mc-cdn-images/icons/social-block-v2/gray-{{ link.symbol }}-96.png" style="width: 24px;margin-bottom: -4px;margin-top: -4px;" width="24" /></a>
+    <li style="margin-bottom: 0.5em">{{ format_date_range(event.start, event.end, short=True) }} {{ event.title }}
+    {%- if event.links %}<div style="text-align:center;padding-right:20%">
+            {%- for link in event.links -%}
+            <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
         {% endfor -%}
+    </div>{% endif %}
     </li>
     {% endfor %}
 </ul>
