@@ -9,6 +9,7 @@ import functools
 import pathlib
 import typing as t
 
+import arrow
 import click
 import dateutil
 import ics
@@ -136,12 +137,23 @@ def sort_date(d: datetime.date | datetime.datetime) -> datetime.datetime:
 def generate_ical_url(event: dict):
     """Generate an iCalendar data URL for an event."""
     calender = ics.Calendar()
+
+    def arrow_cast(date_or_time: t.Optional[datetime.datetime | datetime.date]):
+        if date_or_time is None:
+            return None
+        if isinstance(date_or_time, datetime.datetime):
+            return arrow.get(date_or_time, "Europe/Vienna")
+        return arrow.get(date_or_time)
+
     ical_event = ics.Event(
         name=event["title"],
-        begin=event["start"],
-        end=event.get("end"),
+        begin=arrow_cast(event["start"]),
+        end=arrow_cast(event.get("end")),
         description=event["description"],
+        location=event.get("location"),
     )
+    if not isinstance(event["start"], datetime.datetime):
+        ical_event.make_all_day()
     calender.events.add(ical_event)
     return "data:text/calendar;base64," + base64.b64encode(calender.serialize().encode()).decode()
 
