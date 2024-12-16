@@ -59,7 +59,7 @@ link_data["tradivarium"] = {
 }
 link_data["homepage"] = {
     "title": "Mehr Infos auf der Homepage",
-    "symbol": "link",
+    "symbol": "home",
     "alt": "Homepage-Symbol",
 }
 link_data["ical"] = {

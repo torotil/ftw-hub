@@ -64,7 +64,7 @@ events:
     description: ""
     links:
       fb.event: https://www.facebook.com/events/1911345682702396
-      tradivarium: https://tradivarium.at/event/2024-12-28-190000-to-2025-01-02-220000/vienna-folk-marathon-202425
+      homepage: https://vienna.folkmarathon.org/
     start: 2024-12-28
     end: 2025-01-02
     bands: []
