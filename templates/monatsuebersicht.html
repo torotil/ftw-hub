@@ -13,11 +13,11 @@
         {% if event.description %}<p>
             {{ event.description|replace('\n\n', '</p><p>')|replace('\n', '<br />')|safe }}
         </p>{% endif %}
-        {% if event.links %}<p style="text-align:center;padding-right:20%">
+        {% if event.links %}<div style="text-align:center;padding-right:20%">
             {%- for link in event.links -%}
                 <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
             {% endfor -%}
-        </p>{% endif %}
+        </div>{% endif %}
 	</li>
 	{% endfor %}
 </ul>
@@ -36,11 +36,11 @@
         {% if event.description %}<p>
             {{ event.description|replace('\n\n', '</p><p>')|replace('\n', '<br />')|safe }}
         </p>{% endif %}
-        {% if event.links %}<p style="text-align:center;padding-right:20%">
+        {% if event.links %}<div style="text-align:center;padding-right:20%">
             {%- for link in event.links -%}
                 <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
             {% endfor -%}
-        </p>{% endif %}
+        </div>{% endif %}
 	</li>
 	{% endfor %}
 </ul>
