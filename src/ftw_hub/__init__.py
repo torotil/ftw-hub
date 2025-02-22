@@ -48,24 +48,34 @@ def cli(ctx, data_dir: pathlib.Path):
 
 link_data = collections.defaultdict(lambda: {"symbol": "link", "alt": "Link-Symbol"})
 link_data["fb.event"] = {
-    "title": "diese Veranstaltung auf Facebook",
+    "title": "Diese Veranstaltung auf Facebook",
+    "short_title": "Facebook",
     "symbol": "facebook",
     "alt": "Facebook-Logo",
 }
 link_data["tradivarium"] = {
     "title": "Veranstaltungsinfos auf tradivarium.at",
+    "short_title": "Tradivarium",
     "symbol": "link",
     "alt": "Link-Symbol",
 }
 link_data["homepage"] = {
     "title": "Mehr Infos auf der Homepage",
+    "short_title": "Homepage",
     "symbol": "home",
     "alt": "Homepage-Symbol",
 }
 link_data["ical"] = {
-    "title": "in den Kalender eintragen (ical)",
+    "title": "In den Kalender eintragen (ical)",
+    "short_title": "Kalendereintrag (ical)",
     "symbol": "calendar",
     "alt": "Kalender-Symbol",
+}
+link_data["video"] = {
+    "title": "Hörprobe",
+    "short_title": "Hörprobe",
+    "symbol": "youtube",
+    "alt": "Video-Symbol",
 }
 MONTHS_DE = [
     "Jänner",

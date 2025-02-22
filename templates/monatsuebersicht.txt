@@ -12,7 +12,7 @@ Workshops und Tanzabende im Überblick
 {%- endif -%}
 
 {%- for link in event.links %}
-{{ link.href }}
+{{ link.short_title }}: {{ link.href }}
 {%- endfor %}
 
 
@@ -30,7 +30,7 @@ Workshops und Tanzabende im Überblick
 {%- endif -%}
 
 {%- for link in event.links %}
-{{ link.href }}
+{{ link.short_title }}: {{ link.href }}
 {%- endfor %}
 
 
@@ -39,8 +39,9 @@ Workshops und Tanzabende im Überblick
 ** Vorschau
 ------------------------------------------------------------
 {% for event in preview %}
-{{ format_date_range(event.start, event.end, short=True) }} {{ event.title }}{% if event.links %} — {% for link in event.links %} {{ link.href }}{% endfor -%}{% endif -%}
-{% endfor %}
+{{ format_date_range(event.start, event.end, short=True) }} {{ event.title }}{% if event.links %}{% for link in event.links %}
+- {{ link.short_title }}: {{ link.href }}{% endfor -%}
+{% endif -%}{% endfor %}
 
 
 
