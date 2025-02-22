@@ -18,29 +18,23 @@ events:
     social: false
     price: 60€ / 40€
   - &ws202502
-    title: Polska-Abendkurs (1/4)
+    title: Polska-Abendkurs mit Judith Benkö (4 Montage)
     description: |
-      Ein Workshop an 4 Montagen.
+      Jeweils 19:00 bis 21:00 an den folgenden vier Montagen: 17.02. (kostenslose Schnuppereinheit), 24.02., 03.03., 10.03.
 
-      Anmeldung bis xx.xx. per E-Mail an jaichwilltanzen@gmail.com
-    location: 8., Lange Gasse 8
+      Wir wiederholen die Grundlagen des Polskatanzens und bauen dann diese Basis aus. Wir hören uns in die Musik wieder ein und finden gemeinsam Wege, uns darin harmonisch zu bewegen.
+
+      Die erste Einheit ist eine kostenlose Schnuppereinheit, du kannst also einfach mal mitmachen, ohne den ganzen Kurs besuchen zu müssen.
+
+      Kursbeitrag: 75€ / 50€
+
+      Anmeldung bis 17.02. per E-Mail an jaichwilltanzen@gmail.com
+    location: 8., Lange Gasse 8/2
+    price: 75€ / 50€
     start: 2025-02-17T19:00:00
-    end: 2025-02-17T22:00:00
-    links: {}
+    end: 2025-02-17T21:00:00
+    links:
+      homepage: https://assets.folktanz.at/judith/polska-kurs-2025-02.pdf
+      fb.event: https://www.facebook.com/events/468914706265249/468915962931790/
     styles: [scandi]
     workshop: true
-  - <<: *ws202502
-    title: Polska-Abendkurs (2/4)
-    description: ""
-    start: 2025-02-24T19:00:00
-    end: 2025-02-24T22:00:00
-  - <<: *ws202502
-    title: Polska-Abendkurs (3/4)
-    description: ""
-    start: 2025-03-03T19:00:00
-    end: 2025-03-03T22:00:00
-  - <<: *ws202502
-    title: Polska-Abendkurs (4/4)
-    description: ""
-    start: 2025-03-10T19:00:00
-    end: 2025-03-10T22:00:00

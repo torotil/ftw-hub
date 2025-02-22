@@ -97,9 +97,12 @@ events:
     social: false
   - title: "Tanzkurs mit Anna Björk & Karin Wallin (Geige) aus Schweden"
     description: |
-      Ein fünftagiger Tanzkurs zu Bakmes och Polska hier in Wien geben. Karin Wallin wir dazu live spielen. "Bakmes och Polska" ist eine Bezeichnung für die westschwedischen Polskaformen auf der Tanzbahn, mit diese beiden Paardrehungen und Wicklerfiguren. Die fünf Tage geben Zeit sich mit Bakmes och Polska gründlich zu befassen. Damit umfasst der Kurs sowohl die Rundtanzformen Polska wie auch Bakmes sowie auf der Tanzbahn getanzte Wicklerfiguren. Dieser einwöchige Tanzkurs zum Paartanzen bietet eine aussergewöhnliche Gelegenheit zur tänzerischen Vertiefung.
+      Ein fünftägiger Tanzkurs „Bakmes och Polska“ von Anna Björk, mit Live-Musik von Karin Wallin. „Bakmes och Polska“ bezeichnet westschwedische Polskaformen mit zwei Paardrehungen auf der Tanzbahn und Wicklerfiguren. Die fünf Tage geben Zeit sich damit gründlich zu befassen und sind eine außergewöhnliche Gelegenheit zur Vertiefung.
+
+      In Schweden hat sich in den letzten Jahrzehnten eine sehr lebendige und fachlich hochqualifizierte Schule des Unterrichtes des traditionellen Tanzens entwickelt. Kontakt, Gleichgewicht, Haltung, Interaktion mit Tanzpartnern und Musik stehen im Mittelpunkt. Anna Björk ist eine der führenden Vertreterinnen dieser Praxis. Es gelingt ihr sowohl ausgewiesenen Fachleuten wie auch Tanzanfängern wesentliches Neues und Vertiefendes zu vermitteln.
 
       Teilnahmebeitrag: 320€
+    price: 320€
     location: Bockkeller, 16., Gallitzinstraße 1
     start: 2025-02-03
     end: 2025-02-07
@@ -107,11 +110,44 @@ events:
       homepage: http://winterkurs.tradmus.org/
     workshop: true
   - title: "Tanz & Konzert — Karin Wallin & Anders Norudde"
-    description: ""
+    description: "Schwedische Tanzmusik vom feinsten."
     location: Bockkeller, 16., Gallitzinstraße 1
     start: 2025-02-07
     end: 2025-02-07
     social: true
     styles: [scandi]
     links:
+      video: https://www.youtube.com/watch?v=AOJZXHqWjVk
       homepage: http://winterkurs.tradmus.org/
+  - title: "Balfolk-Abendkurs: Schnuppereinheit und Anmeldeschluss"
+    description: |
+      Von März bis Juni, also im Sommersemester, wird es einen fortlaufenden Balfolk-Tanzkurs geben. Dieser richtet sich an alle, die etwas kontinuierlicher dranbleiben und ihr Tanzen laufend verbessern wollen.
+      Thematisch dreht es sich um jene Tänze, die an Tanzabenden häufig getanzt werden. Balfolk meint im weitesten Sinne traditionelle Tänze, vor allem aus Frankreich, aber auch aus anderen Teilen Europas.
+
+      Den Kurs werden unter anderem Judith Benkö und Anton Hacker leiten. Es wird beim Kurs eine Mischung aus Live-Musik und Aufnahmen geben, um die Möglichkeiten von beidem nutzen zu können.
+
+      Fixe Tanzpartner:innen sind nicht notwendig. Im Laufe des Kurses wird alleine, aber auch mit wechselnden Partner:innen getanzt.
+
+      maximal 16 Teilnehmer:innen
+
+      ‣ ab 18:45: Ankommen
+      ‣ 19:00-20:30: Kurs
+
+      Voraussichtlich findet der Kurs an den folgenden 14 Donnerstagen statt:
+      März: 6., 13., 20., 27.
+      April: 3., 10., 17., 24.
+      Mai: 8., 15., 22.
+      Juni: 5., 12., 26.
+
+      Fragen und Anmeldungen bitte per E-Mmail an roman@folktanz.at
+
+      Teilnahmebeitrag: 120€ / 80€
+    location: 8., Lange Gasse 8/2
+    links:
+      fb.event: https://www.facebook.com/groups/tanzfolkvienna/permalink/9312528452119092
+      homepage: https://www.plug.events/event/balfolk-abendkurs
+    price: 120€ / 80€
+    start: 2025-03-06T19:00:00
+    end: 2025-03-06T20:30:00
+    workshop: true
+    styles: [balfolk]

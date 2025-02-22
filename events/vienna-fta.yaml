@@ -97,35 +97,70 @@ events:
       fb.event: https://www.facebook.com/events/1240861490576498/
     workshop_event:
       title: Tanzworkshop vor dem FolkTanz-Abend
-      end: 2025-02-02T18:00:00
+      end: 2025-01-05T18:00:00
   - series: vienna/folktanz-abend
     start: 2025-02-02T16:00:00
     end: 2025-02-02T22:30:00
-    title: FolkTanz-Abend mit Solid Ghost
+    title: FolkTanz-Abend mit Duo solid ghost
     description: |
       ‣ 16:00-18:00 Tanz-Workshop mit Simon Wascher
-      ‣ ab 19:00 Tanzabend mit Solid Ghost
+      ‣ ab 19:00 Tanzabend mit Duo solid ghost: Matthias Branschke (Dudelsack) und Merit Zloch (Harfe)
+
+      Duo solid ghost über sich:
+        Ein Duo mit Dudelsack und Harfe? Eine ungewöhnlich Kombination! Unsere Musik besticht durch jede Menge Energie, musikalische Ideenvielfalt und Klangreichtum. Unsere Wurzeln liegen in traditioneller und aktueller Tanzmusik, und das hört man. Unsere Arrangements ranken sich um Melodien aus den letzten 400 Jahren mit einem gehörigen Schuß Popularmusik der letzten 80 Jahre. Hinzu kommen Eigenkompositionen, denen man unsere musikalischen Vorlieben in jeder Hinsicht anhört. Der Dudelsack - die 'E-Gitarre unserer Vorfahren' – mit seinen rasanten Melodien und griffigen Riffs – und die Harfe in der Funktion der Rhytmusgitarre. Lassen Sie sich dieses einzigartige Klang- und Tanzerlebnis nicht entgehen!
 
       Eintritt: 14€/10€
     links:
-      fb.event:
+      video: https://www.youtube.com/watch?v=-JTQkkQf2xk
+      fb.event: https://www.facebook.com/events/631695329526229
     workshop_event:
       title: Tanzworkshop vor dem FolkTanz-Abend
       end: 2025-02-02T18:00:00
   - series: vienna/folktanz-abend
     title: FolkTanz-Abend mit den Lyranten
     description: |
-      ‣ 16:00-18:00 Tanz-Workshop mit Simon Wascher
+      ‣ 16:00-18:00 Tanz-Workshop mit Simon Wascherr, Musik Herman Haertel
       ‣ ab 19:00 Tanzabend mit den Lyranten
+      (Simon Wascher - Drehleier, Albin Paulus - Dudelsäcke, Andreas Helm - Schalmei, Hermann Haertel - Geige)
+
+      Kommt gerne alleine oder gemeinsam: Fixe Tanzpartner:innen sind nicht üblich oder gar notwendig. Keine Anmeldung notwendig.
 
       Eintritt: 14€/10€
     start: 2025-03-30T16:00:00
     end: 2025-03-30T22:30:00
     links:
+      fb.event: https://www.facebook.com/events/1179279916894712/
+    workshop_event:
+      title: Tanzworkshop vor dem FolkTanz-Abend mit Simon Wascher
+      end: 2025-03-30T18:00:00
+  - series: vienna/folktanz-abend
+    title: FolkTanz-Abend mit L’hêtre heureux
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop
+      ‣ ab 19:00 Tanzabend mit L’hêtre heureux
+
+      Eintritt: 14€/10€
+    start: 2025-04-06T16:00:00
+    end: 2025-04-06T22:30:00
+    links:
       fb.event:
     workshop_event:
       title: Tanzworkshop vor dem FolkTanz-Abend
-      end: 2025-05-04T18:00:00
+      end: 2025-04-06T18:00:00
+  - series: vienna/folktanz-abend
+    title: FolkTanz-Abend mit Filippo Gambetta
+    description: |
+      ‣ 16:00-18:00 Tanz-Workshop
+      ‣ ab 19:00 Tanzabend mit Filippo Gambetta
+
+      Eintritt: 14€/10€
+    start: 2025-05-09T16:00:00
+    end: 2025-05-09T22:30:00
+    links:
+      fb.event:
+    workshop_event:
+      title: Tanzworkshop vor dem FolkTanz-Abend
+      end: 2025-05-09T18:00:00
   - series: vienna/folktanz-abend
     title: FolkTanz-Abend mit den TradTöchtern
     description: |
@@ -133,10 +168,10 @@ events:
       ‣ ab 19:00 Tanzabend mit TradTöchter „Neue Geigenmusik“ (Vivien Zeller und Ursula Suchanek)
 
       Eintritt: 14€/10€
-    start: 2025-05-04T16:00:00
-    end: 2025-05-04T22:30:00
+    start: 2025-06-01T16:00:00
+    end: 2025-06-01T22:30:00
     links:
       fb.event:
     workshop_event:
       title: Tanzworkshop vor dem FolkTanz-Abend
-      end: 2025-05-04T18:00:00
+      end: 2025-06-01T18:00:00

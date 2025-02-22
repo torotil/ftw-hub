@@ -26,24 +26,41 @@ events:
       start: 2024-10-11T18:30:00
       description: ""
   - title: Bal-Concert mit Hotel Palindrone
-    description: ""
+    description: |
+      Diesmal mit Special Guest: Johannes Georg Schwarz
+
+      ‣ ab 18:30 Tanz-Crashkurs für Einsteiger:innen
+      ‣ ab 19:30 Musik von der Bühne
+
+      Eintritt: 25€ / unter 27: 17,50€
     location: Sargfabrik, 14., Goldschlagstraße 169
-    start: 2025-02-28
+    links:
+      homepage: https://sargfabrik.at/veranstaltungen/bal-concert-hotel-palindrone-2502
+      tradivarium: https://tradivarium.at/event/2025-02-28-183000-to-2025-02-28-223000/bal-concert-mit-hotel-palindrone
+    start: 2025-02-28T18:30:00
     bands:
       - Hotel Palindrone
     country: Austria
     city: Vienna
     styles: [balfolk]
+    price: 25€ / 17,50€ (unter 27)
     workshop: true
     social: true
-  - title: (tbc) Bal-Concert mit Hotel Palindrone
-    description: ""
-    location: 10., Quellenstraße 149
-    start: 2025-04-25
+    workshop_event:
+      title: Tanz-Crashkurs vor dem Hotel Palindrone Konzert
+      end: 2025-02-28T19:30:00
+      description: ""
+  - title: (tbc) Balfolk mit Hotel Palindrone
+    description: |
+      Eintritt: freie Spende
+    location: Halle der Wiener Gebietsbetreuung Süd, 10., Quellenstraße 149
+    links:
+      tradivarium: https://tradivarium.at/event/2025-04-25-190000/bal-folk-mit-hotel-palindrone
+    start: 2025-04-25T19:00:00
     bands:
       - Hotel Palindrone
     country: Austria
     city: Vienna
     styles: [balfolk]
-    workshop: true
+    workshop: false
     social: true

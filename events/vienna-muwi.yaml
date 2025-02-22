@@ -53,3 +53,24 @@ events:
     links:
       fb.event: https://www.facebook.com/events/1541337746774763
       tradivarium: https://tradivarium.at/event/2025-01-24-190000-to-2025-01-24-230000/muwifolxtanz-vol-27
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.28
+    start: 2025-03-07T19:00:00
+    end: 2025-03-07T23:00:00
+    links:
+      fb.event: https://www.facebook.com/events/1164249739038124/
+      tradivarium: https://tradivarium.at/event/2025-03-07-190000-to-2025-03-07-230000/muwifolxtanz
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.29
+    start: 2025-04-04T19:00:00
+    end: 2025-04-04T23:00:00
+    links:
+      fb.event: https://www.facebook.com/events/636110795630546/
+      tradivarium: https://tradivarium.at/event/2025-04-04-190000-to-2025-04-04-230000/muwifolxtanz
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.30
+    start: 2025-05-16T19:00:00
+    end: 2025-05-16T23:00:00
+    links:
+      fb.event: https://www.facebook.com/events/1164986861688685/
+      tradivarium: https://tradivarium.at/event/2025-05-16-190000-to-2025-05-16-230000/muwifolxtanz
