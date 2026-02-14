@@ -1,4 +1,4 @@
-<h3>Tanz-Gelegenheiten</h3>
+<h3 id="terminliste">Tanz-Gelegenheiten</h3>
 
 {% for month, events in events_per_month.items() %}
 <h4>{{ month_names[month] }}</h4>
@@ -16,7 +16,7 @@
         </p>
         {% if event.links %}<p style="padding-left: 2em">
             {%- for link in event.links -%}
-                <a href= "{{ link.href }}" target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
+                <a href="{{ link.href }}"{% if link.type == "ical" %} type="text/calendar"{% endif %} target="_blank" title="{{ link.title }}"><img alt="{{ link.alt }}" src="https://assets.folktanz.at/feather/{{ link.symbol }}.png" style="margin: 0 0.15em" /></a>
             {% endfor -%}
         </p>{% endif %}
     </li>

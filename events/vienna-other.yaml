@@ -151,3 +151,181 @@ events:
     end: 2025-03-06T20:30:00
     workshop: true
     styles: [balfolk]
+  - title: Wochenend-Tanzworkshop mit Wanda Leben und Anton Hacker
+    description: |
+      Samstag und Sonntag, jeweils 10:00-13:00 und 15:00-17:00
+
+      Tanzschwerpunkt u.a. Walzer
+      Musik: Lauge Dideriksen (Geige) und Jamie (Akkordeon)
+      Kursbeitrag: nach Selbsteinschätzung von 100€ bis 210€
+      Anmeldung unter danskurs@gmx.at
+
+      Es ist kein/e Tanzpartner oder Tanzpartnerin zur Anmeldung erforderlich.
+    location: Bockkeller, 16., Gallitzinstraße 1
+    price: nach Selbsteinschätzung von 100€ bis 210€
+    start: 2025-05-31
+    end: 2025-06-01
+    links:
+      homepage: https://tradivarium.at/event/2025-05-31-100000-to-2025-06-01-170000/bal-folk-tanz-workshop
+    workshop: true
+    styles: [balfolk]
+  - title: Wochenend-Tanzworkshop mit Wanda & Toni
+    description: ""
+    location: Bockkeller, 16., Gallitzinstraße 1
+    price: nach Selbsteinschätzung von 100€ bis 210€
+    start: 2025-10-04
+    end: 2025-10-05
+    links:
+      homepage: https://tradivarium.at/event/2025-05-31-100000-to-2025-06-01-170000/bal-folk-tanz-workshop
+    workshop: true
+    styles: [balfolk]
+  - title: "Balfolk-Abendkurs: Schnuppereinheit und Anmeldeschluss"
+    description: |
+      Von Oktober bis Jänner, also im Wintersemester wird es wieder einen fortlaufenden Balfolk-Tanzkurs geben. Dieser richtet sich an alle, die etwas kontinuierlicher dranbleiben und ihr Tanzen laufend verbessern wollen.
+      Thematisch dreht es sich um jene Tänze, die an Tanzabenden häufig getanzt werden. Balfolk meint im weitesten Sinne traditionelle Tänze, vor allem aus Frankreich, aber auch aus anderen Teilen Europas.
+
+      Den Kurs werden unter anderem Simon Wascher und Judith Benkö leiten. Es wird beim Kurs eine Mischung aus Live-Musik und Aufnahmen geben, um die Möglichkeiten von beidem nutzen zu können.
+
+      Fixe Tanzpartner:innen sind nicht notwendig. Im Laufe des Kurses wird alleine, aber auch mit wechselnden Partner:innen getanzt.
+
+      maximal 20 Teilnehmer:innen
+
+      ‣ ab 18:45: Ankommen
+      ‣ 19:00-20:30: Kurs
+
+      Voraussichtlich findet der Kurs an den folgenden 16 Donnerstagen statt:
+      Oktober: 2., 9., 16., 23., 30.
+      November: 6., 13., 20., 27.
+      Dezember: 4., 11., 18.
+      Jänner: 8., 15., 22., 29.
+
+      Fragen und Anmeldungen bitte per E-Mail an roman@folktanz.at
+
+      Teilnahmebeitrag: 135€ / 90€
+    location: 8., Lange Gasse 8/2
+    price: 135€ / 90€
+    links:
+      homepage: https://www.plug.events/event/balfolk-abendkurs-wintersemester-20252026965
+      fb.event: https://www.facebook.com/groups/tanzfolkvienna/posts/24796321173313236
+    start: 2025-10-02T19:00:00
+    end: 2025-10-02T20:30:00
+    workshop: true
+    styles: [balfolk]
+  - title: Tanzkonzert „Die Paradeiser“+ „Folk Fiddle Ensemble Wien“
+    description: |
+      „Die Paradeiser” sind ein junges Projekt aus volksmusikbegeisterten Mitgliedern zwischen 20 und 70 Jahren. Sie spielen hauptsächlich Landler, Schleunige, Walzer, Polkas und Boarische ("Schottisch"). Ergänzt wird das Programm durch ungarische Czardas, slowakische Romaweisen, Klezmer-Hochzeitsstücke oder serbische Kolos.
+      Besetzung: Hermann Fritz: Geige, Angelika Hudler: Geige, Johanna Senger: Bratsch, Philipp Schachner: Kontrabass
+
+      Das „Folk Fiddle Ensemble Wien“ ist eine Gruppe enthusiastischer Fiddler*innen und anderer Instrumentalist*innen. Sie spielen Stücke aus verschiedensten, größtenteils europäischen Folk-Musik-Traditionen.
+      Besetzung: Angelika Hudler: Geige + Arrangement + Leitung, Guntra Aistara: Geige, Frederik Feldmann: Geige, Andrea Jantschko: Oud, Henri Katz: Geige, Andrea Malfer: Geige, Walter Pöffel: Geige, Clara Siersch: Bratsche, Nükhet Stanfel: Geige, Mariann Unterluggauer: Geige. Begleitung: Johanna Senger: Bratsch, Philipp Schachner: Kontrabass
+
+      Dieses Konzert wird vom "Kulturverein EVOE" veranstaltet.
+      Eintritt: Freie Spende (Vorschlag 15-25€)
+    location: Kulturzentrum im Amerlinghaus, 07., Schrankgasse 2
+    start: 2025-11-02T18:00:00
+    end: 2025-11-02T22:00:00
+    links:
+      homepage: https://amerlinghaus.at/events/die-paradeiser-folk-fiddle-ensemble-wien/
+      fb.event: https://www.facebook.com/events/1713219059277829/
+    bands: [Die Paradeiser+ „Folk Fiddle Ensemble Wien“]
+    country: Austria
+    city: Vienna
+    styles: [balfolk, scandi]
+    workshop: false
+    price: freie Spende (Vorschlag 15-25€)
+  - title: Workshop und Tanzabend
+    description: |
+      Folk Tanz Workshop mit Maximilian Ohmacht
+
+      ab 18 Uhr: Workshop
+      ab 20 Uhr: Tanzabend
+
+      Kursbeitrag: 15€
+      Anmeldung: ohmi@indes.at
+    location: Blauer Salon, 05., Ramperstorffergasse 63
+    links:
+      fb.event: https://www.facebook.com/ohmi.deux/posts/pfbid0SySZ5JMrPpeWsyPce5gEchHvw6WLqUhpYCJ5hviXJQnwc9mxjPPs3rQg6vbLx8oNl
+    styles: [balfolk]
+    workshop: true
+    social: true
+    price: 15€
+    start: 2025-11-08T18:00:00
+    end: 2025-11-08T22:00:00
+  - title: GrundSubstanz Tanzworkshop
+    description: Tanzworkshop mit Simon Wascher, begleitet von Hermann Haertel (Geige)
+    location: Österreichisches Volksliederwerk, 1., Openrgasse 6
+    start: 2025-11-18T18:00:00
+    end: 2025-11-18T22:00:00
+    workshop: true
+  - title: Steirer Tanzwerkstatt mit Wanda & Toni
+    description: |
+      Themenschwerpunkt Steirer & Landler
+      Musik: Lauge Dideriksen (Geige) und Hermann Fritz (Geige)
+
+      Kurszeiten
+      ‣ Sa 10:00 – 13:00 und 15:00 - 17:00
+      ‣ So 10:00 – 13:00 und 15:00 - 17:00
+
+      Kursbeitrag für das Workshopwochenende nach Selbsteinschätzung: 100€ bis 210€
+      Anmeldung unter danskurs@gmx.at
+      Es ist kein/e Tanzpartner oder Tanzpartnerin für die Anmeldung erforderlich.
+    location: Bockkeller, 16., Gallitzinstraße 1
+    price: 100-210€
+    start: 2025-12-06
+    end: 2025-12-07
+    links:
+      homepage: https://tradivarium.at/event/2025-12-06-100000-to-2025-12-07-170000/steirer-tanzwerkstatt
+    workshop: true
+    styles: [balfolk]
+  - title: „Von den Tanzschritten zum Tanzen“ mit Annekatrin Gall und Simon Wascher
+    description: |
+      "Zwei links, zwei rechts und rundherum" ist schnell gelernt und macht auch Freude.
+
+      Mit dem Tanzen waechst aber oft der Wunsch nach mehr Leichtigkeit, Gewandtheit, Groove, Laessigkeit, Gemuetlichkeit, Erleben, Koennen, Sicherheit... weniger Kraftaufwand fuer mehr Vergnuegen ... darum geht es in diesem Kurs anhand ausgewaehlter Tanzformen wie zum Beispiel Schottisch, Mazurka, Menuett ...
+
+      Vorkenntnisse sind keine erforderlich. Eine Teilnahme alleine ist selbstverstaendlich moeglich und sinnvoll.
+
+      Kursbeitrag: 180€
+    location: Bockkeller, 16., Gallitzinstraße 1
+    price: 180€
+    start: 2026-02-05
+    end: 2026-02-08
+    links:
+      homepage: http://winterkurs.tradmus.org
+    styles: [balfolk, swedish]
+    workshop: true
+  - title: "Balfolk-Abendkurs: Schnuppereinheit und Anmeldeschluss"
+    description: |
+      Im Sommersemester wird es wieder einen fortlaufenden Balfolk-Tanzkurs geben. Dieser richtet sich an alle, die etwas kontinuierlicher dranbleiben und ihr Tanzen laufend verbessern wollen. Thematisch dreht es sich um Tänze, die an Tanzabenden häufig getanzt werden. Balfolk meint im weitesten Sinne traditionelle Tänze, vor allem aus Frankreich, aber auch aus anderen Teilen Europas.
+
+      Den Kurs wird unter anderem Judith Benkö leiten. Es wird beim Kurs eine Mischung aus Live-Musik und Aufnahmen geben, um die Möglichkeiten von beidem nutzen zu können.
+
+      Fixe Tanzpartner:innen sind nicht notwendig. Im Laufe des Kurses wird alleine, aber auch mit wechselnden Partner:innen getanzt.
+
+      Voraussichtlich findet der Kurs an den folgenden 16 Montagen statt:
+      März: 2., 9., 16., 23., 30.
+      April: 13., 20., 27.
+      Mai: 4., 11., 18.
+      Juni: 1., 8., 15., 22., 29.
+
+      ‣ ab 17:45: Ankommen
+      ‣ 18:00-19:30: Kurs
+
+      Teilnahmebeitrag: 135€ / 90€
+      Anmeldung auf https://dub.sh/bafolk2026ss (maximal 20 Teilnehmer:innen)
+    location: 8., Lange Gasse 8/2
+    price: 180€ / 90€
+    links:
+      homepage:
+        href: https://dub.sh/bafolk2026ss
+        title: zur Anmeldung
+        short_title: Anmeldung
+      fb.event: https://www.facebook.com/groups/tanzfolkvienna/posts/25984036654541676
+    start: 2026-03-02T18:00:00
+    end: 2026-03-02T19:30:00
+    workshop: true
+    styles: [balfolk]
+  - title: Rábaköz Csárdás Tanzworkshop
+    location: Bockkeller, 16., Gallitzinstraße 1
+    start: 2026-03-14
+    end: 2026-03-15

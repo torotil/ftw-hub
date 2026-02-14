@@ -7,6 +7,7 @@ import collections
 import datetime
 import functools
 import pathlib
+import sys
 import typing as t
 
 import arrow
@@ -41,7 +42,9 @@ def cli(ctx, data_dir: pathlib.Path):
     events = [format_event(e, data.get("series", {})) for e in data.get("events", [])]
     ws_data = {"workshop": True, "social": False, "sub_event": True}
     ws = [
-        utils.merge_dicts(e, e["workshop_event"], ws_data) for e in events if "workshop_event" in e
+        utils.merge_dicts(e, e["workshop_event"], ws_data)
+        for e in events
+        if e.get("workshop_event")
     ]
     ctx.obj["events"] = list(sorted(events + ws, key=lambda e: e["sort_date"]))
 
@@ -100,12 +103,18 @@ EVENT_DEFAULTS = {
 }
 
 
+def data_to_link(t: str, data: dict | str) -> dict:
+    if isinstance(data, str):
+        data = {"href": data}
+    return {**link_data[t], **data}
+
+
 def format_event(event: dict, series: dict):
     """Extend the event data structure a bit."""
-    event = utils.merge_dicts(EVENT_DEFAULTS, event)
     if (series_key := event.get("series")) and (event_series := series.get(series_key)):
         event = utils.merge_dicts(event_series.get("defaults", {}), event)
-    event["links"] = [{"href": l, **link_data[t]} for t, l in event["links"].items() if l]
+    event = utils.merge_dicts(EVENT_DEFAULTS, event)
+    event["links"] = [data_to_link(t, l) for t, l in event["links"].items() if l]
     event["description"] = event["description"].strip()
     event["sort_date"] = sort_date(event["start"])
     return event
@@ -238,24 +247,27 @@ def monatsuebersicht_txt(ctx, month):
     click.echo(template.render(tpl_data), nl=False)
 
 
-@cli.command
-@click.pass_context
-def folktanz_at(ctx):
-    """Generate a list of events for the folktanz.at website."""
-    now = datetime.datetime.now()
-    date_from = datetime.datetime(now.year, now.month, 1)
+CURRENT_MONTH = datetime.datetime.now().strftime("%Y-%m")
 
+
+@cli.command
+@click.option("--month-from", type=click.DateTime(formats=["%Y-%m"]), default=CURRENT_MONTH)
+@click.pass_context
+def folktanz_at(ctx, month_from=None):
+    """Generate a list of events for the folktanz.at website."""
     tpl_data = {
         "events_per_month": collections.defaultdict(list),
         "month_names": {},
         "format_date_range": format_date_range,
     }
     for event in ctx.obj["events"]:
-        if sort_date(event["sort_date"]) < date_from:
+        if sort_date(event["sort_date"]) < month_from:
             continue
         if event.get("sub_event", False):
             continue
-        event["links"] = [{"href": generate_ical_url(event), **link_data["ical"]}] + event["links"]
+        event["links"] = [
+            {"type": "ical", "href": generate_ical_url(event), **link_data["ical"]}
+        ] + event["links"]
         month = event["start"].strftime("%y-%m")
         tpl_data["month_names"][
             month
@@ -264,3 +276,9 @@ def folktanz_at(ctx):
 
     template = ctx.obj["jinja_env"].get_template("folktanz-at.html")
     click.echo(template.render(tpl_data), nl=False)
+
+
+@cli.command
+@click.pass_context
+def dump(ctx):
+    yaml.dump(ctx.obj["events"], sys.stdout)
