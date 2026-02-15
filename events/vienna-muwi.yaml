@@ -102,3 +102,23 @@ events:
     links:
       fb.event: https://www.facebook.com/events/723716487360752/
       tradivarium:
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.35
+    start: 2026-02-27T19:00:00
+    end: 2026-02-27T23:00:00
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.36
+    start: 2026-03-20T19:00:00
+    end: 2026-03-20T23:00:00
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.37
+    start: 2026-04-17T19:00:00
+    end: 2065-04-17T23:00:00
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.38
+    start: 2026-05-08T19:00:00
+    end: 2065-05-08T23:00:00
+  - series: vienna/muwifolxtanz
+    title: MuwiFolxTanz Vol.39
+    start: 2026-05-29T19:00:00
+    end: 2026-05-29T23:00:00
