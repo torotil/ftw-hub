@@ -311,7 +311,7 @@ events:
       ‣ ab 17:45: Ankommen
       ‣ 18:00-19:30: Kurs
 
-      Teilnahmebeitrag: 135€ / 90€
+      Teilnahmebeitrag: 180€ / 90€
       Anmeldung auf https://dub.sh/bafolk2026ss (maximal 20 Teilnehmer:innen)
     location: 8., Lange Gasse 8/2
     price: 180€ / 90€
@@ -341,3 +341,4 @@ events:
 
       Ab 10 angemeldeten Personen findet der Kurs statt, ab 15 mit Live-Musik (Hermann Haertel: Geige, u.a.)
       Abends werden wir eine Session Organisieren und Tanzen.
+    workshop: true
