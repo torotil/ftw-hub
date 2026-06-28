@@ -44,7 +44,7 @@ series:
       workshop_event:
         title: Workshop vor dem FolkTanz-Abend
         description: |
-          Workshop vor dem FolkTanz-Abend. Der Tanzabend ist im Preis inkludiert.
+          Eintritt € 10,-; beim Besuch des Tanzabends ist der Workshop inkludiert.
 
 
 events:
@@ -374,6 +374,17 @@ events:
       homepage: https://www.plug.events/event/folktanz-abend-mit-lhetre-hereux506
     workshop_event:
       end: 2026-03-29T18:00:00
+      title: "Workshop vor dem FolkTanz-Abend: „Tanzend spielen mit der Sprache der Musik“"
+      description: |
+        Was passiert mit der Musik, wenn wir einen Schottisch oder eine Mazurka tanzen und dabei aufeinander achten? Wie kann beim Tanzen ein musikalischer Dialog zwischen Musizierenden und Tanzenden entstehen?
+        Wenn es in der Musik eine plötzliche Wendung gibt, wie können wir das in unser Tanzen miteinbeziehen? Wie können wir allgemein mit Melodien und Rhythmen spielen?
+        Diese und andere musikalische Ideen werden wir besprechen und tänzerisch erforschen.
+
+        Léo ist Musiker in verschiedenen Balfolk-Bands und auf den Tanzböden von Festivals in Frankreich, der Schweiz, Deutschland, Italien, Spanien und Belgien unterwegs.
+
+        Sein Tanzstil hat sich durch unterschiedliche Einflüsse und Begegnungen geformt, in Seminaren und Workshops und natürlich auch auf dem Tanzboden.
+
+        Eintritt € 10,-; beim Besuch des Tanzabends ist der Workshop inkludiert.
   - series: vienna/folktanz-abend-2026
     start: 2026-04-12T16:00:00
     end: 2026-04-12T22:30:00
@@ -398,14 +409,31 @@ events:
       fb.event: https://www.facebook.com/events/2036591560463782
     workshop_event:
       end: 2026-04-12T18:00:00
+      title: Workshop vor dem FolkTanz-Abend mit Judith Benkö
   - series: vienna/folktanz-abend-2026
     start: 2026-05-10T16:00:00
     end: 2026-05-10T22:30:00
     title: FolkTanz-Abend mit Filippo Gambetta
+    description: |
+      ‣ 16h00 - 18h00 Tanz-Workshop mit Judith Benkö (Musik Filippo Gambetta)
+      ‣ 19h00 - 22h30 Tanzabend mit Filippo Gambetta
+
+      Es wird Musik gespielt, zu der das übliche Bal-Folk-Repertoire (Walzer, Polka, Mazurka, Schottisch, Mixer, etc. ) und Wickler getanzt werden kann.
+
+      Kommt gerne alleine oder gemeinsam: Fixe Tanzpartner:innen sind nicht üblich oder gar notwendig.
+
+      Eintritt inklusive Tanzworkshop: red. € 10,- / € 16,-. Keine Anmeldung erforderlich
     links:
       homepage: https://www.plug.events/event/folktanz-abend-mit-filippo-gambetta584
       fb.event: https://www.facebook.com/events/1231757148901955/
     workshop_event:
+      title: Mazurka-Workshop vor dem Folktanz-Abend
+      description: |
+        Workshop-Leitung: Judith Benkö — Musik: Filippo Gambetta
+
+        Wir werden uns in diesem Workshop mit der Mazurka von den Grundlagen auf befassen. Dabei liegt ein besonderer Fokus auf dem Körpergefühl, das uns die Musik vermittelt, und auf der Verbindung zwischen den Tanzenden.
+
+        Eintritt € 10,-; beim Besuch des Tanzabends ist der Workshop inkludiert.
       end: 2026-05-10T18:00:00
   - series: vienna/folktanz-abend-2026
     start: 2026-06-21T16:00:00
